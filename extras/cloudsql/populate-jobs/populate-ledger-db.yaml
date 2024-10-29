@@ -255,7 +255,7 @@ spec:
       serviceAccountName: boa-ksa
       containers:
       - name: sidecar-controller
-        image: bash@sha256:b2ecea0c7afaa96b245b9bc1f207c1399bd7358f1be6b45964ae6a31dec60da9
+        image: bash@sha256:ce062497c248eb1cf4d32927f8c1780cce158d3ed0658c586a5be7308d583cbb
         command: ['bash', '-c', '. /scripts/wait-to-complete-sidecar.sh "initialize-database.sh" "cloud_sql_proxy"']
         volumeMounts:
         - name: scripts
@@ -315,7 +315,7 @@ spec:
           limits:
             cpu: "200m"
             memory: "100Mi"
-        image: gcr.io/cloudsql-docker/gce-proxy:1.37.0@sha256:5cda69b84c0fb61de9b664872b2da9f8ef9333144b36d67b7a7f84f8dabdced5
+        image: gcr.io/cloudsql-docker/gce-proxy:1.37.1@sha256:ad8f27007e99feb885da7c3b0986cb68509fd122cd0c3540ddf88cc567ac1565
         env:
         - name: CONNECTION_NAME
           valueFrom:
