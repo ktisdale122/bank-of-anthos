@@ -1,0 +1,11 @@
+resourceBundleSelector:
+  cloudBuildRepository:
+    name: projects/proj-shared-dev-001/locations/us-central1/connections/cymbal-bank-connection/repositories/ktisdale122-bank-of-anthos
+    tag: v1.1.0
+    serviceAccount: projects/proj-shared-dev-001/serviceAccounts/cymbal-bank-service-account@proj-shared-dev-001.iam.gserviceaccount.com
+target:
+  fleet:
+    project: projects/proj-shared-dev-001
+rolloutStrategy:
+  rolling:
+    maxConcurrent: 2
